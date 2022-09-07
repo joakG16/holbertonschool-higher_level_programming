@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-for a in range (97, 123):
-    print("{}".format(chr(a)), end="") # printing alphabet using str.format()
+for c in range (97, 123):
+    print("{}".format(chr(c)), end="")# printing alphabet using str.format()
