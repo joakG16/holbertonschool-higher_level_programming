@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+''' below condition makes code executable only when not imported '''
 if __name__ == "__main__":
     from add_0 import add
 
