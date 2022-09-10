@@ -6,6 +6,6 @@ of the object it is called upon.'''
 if __name__ == '__main__':
     import hidden_4
     listdir = dir(hidden_4)
-    for i in listdir:
-        if not i.startswith("__", 0):
-            print("{}".format(i))
+    for name in listdir:
+        if not name.startswith("__", 0):
+            print("{}".format(name))
