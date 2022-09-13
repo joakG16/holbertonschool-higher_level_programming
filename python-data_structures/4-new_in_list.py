@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-from http.client import FOUND
-
 
 def new_in_list(my_list, idx, element):
     list_copy = my_list.copy()
