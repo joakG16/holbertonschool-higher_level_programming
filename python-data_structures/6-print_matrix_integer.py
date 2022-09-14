@@ -3,4 +3,10 @@
 
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
-        print(' '.join(map(str, row)))
+        for value in row:
+            if value != row[-1]:
+                print("{}".format(value), end= " ")
+            else:
+                print("{}".format(value))
+    if not row:
+        print()
