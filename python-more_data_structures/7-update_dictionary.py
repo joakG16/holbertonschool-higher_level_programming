@@ -5,5 +5,5 @@ argument. If the item does not exist, the item will be added. '''
 
 def update_dictionary(a_dictionary, key, value):
     update_dic = a_dictionary
-    update_dic.update({key:value})
+    update_dic.update({key: value})
     return update_dic
