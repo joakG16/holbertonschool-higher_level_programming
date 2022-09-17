@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 
 
-from __future__ import division
-from operator import index
-from unittest import result
-
-
 def list_division(my_list_1, my_list_2, list_length):
     result_list = []
     index = 0
