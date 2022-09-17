@@ -2,16 +2,15 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    element = 0
-    for element in range(x):
+    index, count = 0, 0
+    while index < x:
         try:
-            print("{:d}".format(my_list[element]), end="")
-            element += 1
+            print("{:d}".format(my_list[index]), end="")
+            index += 1; count += 1
         except (ValueError, TypeError):
-            ''' next line is for return value, so it doesn't count the
-            index in which the last error ocurred, and print real number of
-            int printed'''
-            element -= 1
+            ''' index will change, but not count because, as an error
+            it won't be printed'''
+            index += 1
             continue
     print()
-    return element
+    return count
