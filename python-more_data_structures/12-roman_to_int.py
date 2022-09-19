@@ -5,19 +5,19 @@ def roman_to_int(roman_string):
 
     if not isinstance(roman_string, str) or not roman_string:
         return 0
-    
+
     roman_dict = {
-        "I": 1, 
-        "V": 5, 
-        "X": 10, 
-        "L": 50, 
-        "C": 100, 
-        "D": 500, 
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
         "M": 1000
     }
     number = 0
-    
-    ''' multiple replace of "border cases", to later sum in "number" '''    
+
+    ''' multiple replace of "border cases", to later sum in "number" '''
     roman_string = roman_string.replace("IV", "IIII").replace("IX", "VIIII")
     roman_string = roman_string.replace("XL", "XXXX").replace("XC", "LXXXX")
     roman_string = roman_string.replace("CD", "CCCC").replace("CM", "DCCCC")
