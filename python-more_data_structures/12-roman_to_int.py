@@ -19,8 +19,11 @@ def roman_to_int(roman_string):
 
     ''' multiple replace of "border cases", to later sum in "number" '''
     roman_string = roman_string.replace("IV", "IIII").replace("IX", "VIIII")
+    ''' for 4 and 9 -^'''
     roman_string = roman_string.replace("XL", "XXXX").replace("XC", "LXXXX")
+    ''' for 40 and 90 -^'''
     roman_string = roman_string.replace("CD", "CCCC").replace("CM", "DCCCC")
+    ''' for 400 and 900 -^'''
 
     for letter in roman_string:
         '''r_dict[letter] is r_dict["X"](exam.), gets value of "X" = 10'''
