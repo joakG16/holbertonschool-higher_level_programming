@@ -1,4 +1,7 @@
-''' Defining an empty class "Square" '''
+#!/usr/bin/python3
+
+
+"Module that creates an empty class"
 class Square:
-    ''' It's empty '''
+    ''' Defining an empty class "Square" '''
     pass
