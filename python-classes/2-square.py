@@ -6,7 +6,7 @@ class Square:
     ''' Private instantiation through method'''
     def __init__(self, size=0):
         self.set_size(size)
-    
+
     # size setter
     def set_size(self, value):
         if type(value) is not int:
