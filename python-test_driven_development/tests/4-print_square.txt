@@ -27,14 +27,21 @@ CASE 2: Size is not an integer
     Traceback (most recent call last):
     TypeError: size must be an integer
 
-CASE 3: Neither int nor positive
+CASE 3: Size negative
+==============================
+
+    >>> print_square(-4)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+CASE 4: Neither int nor positive
 ================================
 
     >>> print_square(-2.3333)
     Traceback (most recent call last):
     TypeError: size must be an integer
 
-CASE 4: Missing argument 'size'
+CASE 5: Missing argument 'size'
 ===============================
 
     >>> print_square()
