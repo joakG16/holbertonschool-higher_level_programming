@@ -1,0 +1,43 @@
+============================================
+        Test 3 - say my name
+============================================
+
+This text file is a test that checks for
+the module "print_square". To start, it enters in
+interactive mode(python shell) import the module
+needed, and execute some cases:
+REMEMBER THERE'S A SPACE BETWEEN FIRST AND LAST NAME
+
+CASE 1: Positive integer (normal)
+=================================
+
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+
+CASE 2: Size is not an integer
+==============================
+
+    >>> print_square('number')
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+CASE 3: Neither int nor positive
+================================
+
+    >>> print_square(-2.3333)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+CASE 4: Missing argument 'size'
+===============================
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
