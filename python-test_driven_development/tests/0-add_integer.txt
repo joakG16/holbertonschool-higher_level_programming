@@ -1,0 +1,62 @@
+============================================
+            Test 0 - add integer
+============================================
+
+This text files is a tests that checks for
+the module "add_integer". To start, it enters in
+interactive mode(python shell) import the module
+needed, and execute some cases:
+
+CASE 1:CAST
+===========
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(7.3, 10)
+    17
+
+CASE 2: TYPE
+============
+
+    >>> add_integer('aaa', 7)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+CASE 3: NORMAL ADDITION
+=======================
+
+    >>> add_integer(1, 2)
+    3
+
+CASE 4: FLOAT OVERFLOW
+======================
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+CASE 5: FLOAT NaN TO INTEGER
+============================
+
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
+
+CASE 6: ONE ARGUMENT
+====================
+
+    >>> add_integer(95)
+    193
+
+CASE 7: NO ARGUMENT
+===================
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+CASE 8: B ARGUMENT ERROR TYPE
+=============================
+
+    >>> add_integer(19, 'ded')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
