@@ -17,6 +17,8 @@ def matrix_divided(matrix, div):
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
         if (len(row)) != len(matrix[0]): # same size for every list inside matrix
             raise TypeError("Each row of the matrix must have the same size")
+        if not all(isinstance(ele, (int, float)) for ele in row):
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     '''map will iterate each element(i) of the iterable given (mat_list),
     applying the function lambda, which divides the element with div

@@ -48,7 +48,7 @@ CASE 6:
 
     >>> matrix_divided([[15, 20, 10], [22, 'num', 40]], 5)
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 CASE 7:
 =======
