@@ -12,26 +12,38 @@ CASE 1:
 =======
 
     >>> text_indentation = __import__('5-text_indentation').text_indentation
-    >>> text_indentation()
+    >>> text_indentation("Hello? Is there anybody?")
+    Hello?
+    <BLANKLINE>
+    Is there anybody?
+    <BLANKLINE>
 
 CASE 2:
 =======
 
-    >>> text_indentation()
+    >>> text_indentation(t)
+    Traceback (most recent call last):
+    NameError: name 't' is not defined
 
 CASE 3:
 =======
 
-    >>> text_indentation()
-    Traceback (most recent call last):
+    >>> text_indentation("Space.Doesn't.Matter")
+    Space.
+    <BLANKLINE>
+    Doesn't.
+    <BLANKLINE>
+    Matter
 
 CASE 4:
 =======
 
-    >>> text_indentation()
-    Traceback (most recent call last):
+    >>> text_indentation("")
+    >>>
 
 CASE 5:
 =======
 
     >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
