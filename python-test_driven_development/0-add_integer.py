@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' A function that adds two integers'''
 
+
 def add_integer(a, b=98):
     ''' check if the values passed are correct type/acceptable value
     b value is set to 98 by default, so it works with one argument'''
