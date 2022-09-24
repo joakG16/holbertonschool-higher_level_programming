@@ -63,3 +63,8 @@ CASE 8:
     >>> matrix_divided([[15, 20, 10], None], 5)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+CASE 9:
+=======
+    >>> matrix_divided([[15, 20, 10],[22, 5, 40]], float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
