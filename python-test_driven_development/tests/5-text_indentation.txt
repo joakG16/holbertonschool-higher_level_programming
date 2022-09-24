@@ -1,12 +1,11 @@
 ============================================
-        Test 3 - text identation
+        Test 5 - text identation
 ============================================
 
 This text file is a test that checks for
 the module "text_indentation". To start, it enters in
 interactive mode(python shell) import the module
 needed, and execute some cases:
-REMEMBER THERE'S A SPACE BETWEEN FIRST AND LAST NAME
 
 CASE 1:
 =======
@@ -47,3 +46,10 @@ CASE 5:
     >>> text_indentation()
     Traceback (most recent call last):
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+CASE 6:
+=======
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
