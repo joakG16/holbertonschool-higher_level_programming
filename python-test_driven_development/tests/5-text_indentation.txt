@@ -1,0 +1,37 @@
+============================================
+        Test 3 - text identation
+============================================
+
+This text file is a test that checks for
+the module "text_indentation". To start, it enters in
+interactive mode(python shell) import the module
+needed, and execute some cases:
+REMEMBER THERE'S A SPACE BETWEEN FIRST AND LAST NAME
+
+CASE 1:
+=======
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation()
+
+CASE 2:
+=======
+
+    >>> text_indentation()
+
+CASE 3:
+=======
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+
+CASE 4:
+=======
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+
+CASE 5:
+=======
+
+    >>> text_indentation()
