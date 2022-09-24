@@ -8,21 +8,30 @@ max_integer = __import__('6-max_integer').max_integer
 class TestMaxInteger(unittest.TestCase):
     """Creating/defining TestMaxInteger class"""
 
-    def test1(self):
+    def type_error_list(self):
+        '''string in between'''
         with self.assertRaises(TypeError):
-            max_integer(['tati', 7, 9, 2])
+            max_integer([4, 'error', 3, 6])
 
     def test2(self):
-        self.assertEqual(max_integer([]), None)
+        ''' None '''
+        self.assertRaises(TypeError, max_integer, None)
 
     def test3(self):
-        self.assertEqual(max_integer([7, 9, 2, 37, 44, 52]), 52)
+        ''' Float '''
+        self.assertEqual(max_integer([7.7]), 7.7)
 
     def test4(self):
+        ''' Same number '''
         self.assertEqual(max_integer([7, 7, 7, 7, 7]), 7)
 
     def test5(self):
+        ''' Negatives '''
         self.assertEqual(max_integer([-7, -9, 2, 37, -44, 52]), 52)
+    
+    def test5(self):
+        ''' Empty list '''
+        self.assertEqual(max_integer([]), None)
 
 
 if __name__ == '__main__':
