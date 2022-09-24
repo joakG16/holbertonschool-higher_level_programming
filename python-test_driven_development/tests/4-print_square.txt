@@ -1,12 +1,11 @@
 ============================================
-        Test 3 - say my name
+        Test 4 - print square
 ============================================
 
 This text file is a test that checks for
 the module "print_square". To start, it enters in
 interactive mode(python shell) import the module
 needed, and execute some cases:
-REMEMBER THERE'S A SPACE BETWEEN FIRST AND LAST NAME
 
 CASE 1: Positive integer (normal)
 =================================
