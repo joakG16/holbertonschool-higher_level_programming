@@ -1,0 +1,65 @@
+============================================
+        Test 1(2) - divide matrix
+============================================
+
+This text file is a test that checks for
+the module "matrix_divided". To start, it enters in
+interactive mode(python shell) import the module
+needed, and execute some cases:
+
+CASE 1:
+=======
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix_divided([[15, 20, 10], [22, 5, 40]], 5)
+    [[3.0, 4.0, 2.0], [4.4, 1.0, 8.0]]
+
+CASE 2: 
+=======
+
+    >>> matrix_divided([[15, 20, 10], [22, 5, 40]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+    
+
+CASE 3:
+=======
+
+    >>> matrix_divided([[15, 20, 10], [22, 5, 40]], 'nonnum')
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+CASE 4:
+=======
+
+    >>> matrix_divided([(15, 20, 10), [22, 5, 40]], 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+CASE 5:
+=======
+
+    >>> matrix_divided([[15, 20, 10], [ 5, 40]], 5)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+CASE 6:
+=======
+
+    >>> matrix_divided([[15, 20, 10], [22, 'num', 40]], 5)
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for /: 'str' and 'int'
+
+CASE 7:
+=======
+
+    >>> matrix_divided([[15, 20, 10], [22, 5, 40]], None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+CASE 8:
+=======
+
+    >>> matrix_divided([[15, 20, 10], None], 5)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
