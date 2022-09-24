@@ -40,6 +40,10 @@ class TestMaxInteger(unittest.TestCase):
     def test7(self):
         ''' Empty list '''
         self.assertEqual(max_integer([]), None)
+    
+    def test8(self):
+        ''' List of one element '''
+        self.assertEqual(max_integer([2]), 2) 
 
 
 if __name__ == '__main__':
