@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' creating a class named Rectangle '''
+''' creating a class named Rectangle'''
 
 
 class Rectangle:
@@ -61,3 +61,11 @@ class Rectangle:
         str_val += ("#" * self.__width)  # last line of "#'s"
         # without extra newline
         return str_val
+
+    ''' With the return value of repr() it should be possible to recreate
+    our object using eval() -> This function takes a string and evaluates it's
+    content as Python code. repr() makes coder-string-friendly
+    (code basically)'''
+    def __repr__(self):
+        return f'Rectangle({self.width}, {self.height})'
+        # f-Strings format
