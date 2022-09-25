@@ -9,12 +9,12 @@ class Rectangle:
         the property decorator) that set the object's private attributes '''
         self.width = width
         self.height = height
-    
+
     ''' getter for width '''
     @property
     def width(self):
         return self.__width
-    
+
     ''' setter for width '''
     @width.setter
     def width(self, value):
@@ -24,12 +24,12 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     ''' getter for height '''
     @property
     def height(self):
         return self.__height
-    
+
     ''' setter for height '''
     @height.setter
     def height(self, value):
@@ -38,4 +38,4 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         else:
-            self.__height = value 
+            self.__height = value
