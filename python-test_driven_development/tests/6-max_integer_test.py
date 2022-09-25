@@ -10,15 +10,17 @@ class TestMaxInteger(unittest.TestCase):
 
     def type_error_list(self):
         '''string in between'''
-        with self.assertRaises(TypeError):
-            max_integer([4, 'error', 3, 6])
+        self.assertRaises(TypeError, max_integer, [4, 'error', 3, 6])
 
     def test1(self):
         ''' None '''
+        # (Exeption that should be raised, func., arguments passed to func)
         self.assertRaises(TypeError, max_integer, None)
 
     def test2(self):
         ''' max at the end '''
+        # assertEqual will fail if the two objects are unequal as
+        # determined by the '==' operator.
         self.assertEqual(max_integer([1, 2, 7]), 7)
 
     def test3(self):
