@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    ''' Instantiation with optional width and height '''
     def __init__(self, width=0, height=0):
         ''' methods (self.width, self.height) treated as variables (through
         the property decorator) that set the object's private attributes '''
