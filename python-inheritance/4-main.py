@@ -2,6 +2,7 @@
 inherits_from = __import__('4-inherits_from').inherits_from
 
 a = True
+print(inherits_from(a, bool))
 if inherits_from(a, int):
     print("{} inherited from class {}".format(a, int.__name__))
 if inherits_from(a, bool):
