@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' writing a class with respective attributes descripted inside '''
 
+
 class BaseGeometry:
     ''' defining method for non-implemented area '''
     def area(self):

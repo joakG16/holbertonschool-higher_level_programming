@@ -85,7 +85,7 @@ CASE 9:
 ========
 
     >>> try:
-    ...     bg.integer_validator("age", "[3]")
+    ...     bg.integer_validator("age", [3])
     ... except Exception as e:
     ...     print("[{}] {}".format(e.__class__.__name__, e))
     [TypeError] age must be an integer
