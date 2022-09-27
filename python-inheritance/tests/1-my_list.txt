@@ -59,6 +59,6 @@ CASE 6:
 
     >>> lst = MyList([2, 4, 9, 3])
     >>> lst.print_sorted()
-    [2, 4, 9, 3]
+    [2, 3, 4, 9]
     >>> print(lst)
     [2, 4, 9, 3]
