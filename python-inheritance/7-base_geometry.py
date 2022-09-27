@@ -4,9 +4,9 @@
 
 class BaseGeometry:
     ''' defining method for non-implemented area '''
-
     def area(self):
         raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         ''' creating a field (name variable)'''
         self.name = name
