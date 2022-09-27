@@ -6,9 +6,50 @@
 to bring its attributes to use, the first thing
 is to import 1-my_list.py"""
 
-CASE 1: returns empty list since there's nothing to sort
-========================================================
+CASE 1: empty
+=============
 
     >>> MyList = __import__('1-my_list').MyList
     >>> MyList()
     []
+
+CASE 2
+=======
+
+    >>> lst = MyList()
+    >>> lst.append(1)
+    >>> lst.append(4)
+    >>> lst.append(2)
+    >>> lst.append(3)
+    >>> lst.append(5)
+    >>> lst.print_sorted()
+    [1, 2, 3, 4, 5]
+
+CASE 3:
+=======
+
+    >>> lst = MyList()
+    >>> lst.append(-10)
+    >>> lst.append(-20)
+    >>> lst.append(-3)
+    >>> lst.append(-15)
+    >>> lst.print_sorted()
+    [-20, -15, -10, -3]
+
+CASE 4:
+=======
+
+    >>> lst = MyList()
+    >>> lst.append(1)
+    >>> lst.print_sorted()
+    [1]
+
+CASE 5:
+=======
+
+    >>> lst = MyList()
+    >>> lst.append(10)
+    >>> lst.append(2)
+    >>> lst.append(-1)
+    >>> lst.print_sorted()
+    [-1, 2, 10]
