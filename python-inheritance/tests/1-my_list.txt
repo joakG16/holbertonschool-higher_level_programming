@@ -62,3 +62,12 @@ CASE 6:
     [2, 3, 4, 9]
     >>> print(lst)
     [2, 4, 9, 3]
+
+CASE 7:
+=======
+
+    >>> lst = MyList([])
+    >>> lst.print_sorted()
+    []
+    >>> print(lst)
+    []
