@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+''' this module creates a Class that inherits from list '''
 
 class MyList(list):
     ''' with list as superclass, this new one
