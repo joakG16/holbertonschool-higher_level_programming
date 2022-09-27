@@ -1,0 +1,13 @@
+============================================
+            Test 1 - my_list
+============================================
+
+"""This test works for the class "MyList"
+to bring its attributes to use, the first thing
+is to import 1-my_list.py"""
+
+CASE 1:
+=======
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> MyList()
