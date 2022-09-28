@@ -7,4 +7,5 @@ def append_write(filename="", text=""):
     ''' creating a file object through open, append(a) mode specified '''
     with open(filename, mode='a', encoding='utf-8') as a_file:
         a_file.write(text)
-        return len(text)
+        return len(text)  # the characters added are in "text" string, so
+        # just do a len of text
