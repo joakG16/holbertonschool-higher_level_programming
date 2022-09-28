@@ -19,4 +19,4 @@ class Square(Rectangle):
     def __str__(self):
         ''' styling the string representation of the object '''
         return f'[Rectangle] {self.__width}/{self.__height}'
-        # f-Strings format 
+        # f-Strings format
