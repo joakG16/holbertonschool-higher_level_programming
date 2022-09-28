@@ -7,7 +7,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     ''' instantiation method '''
     def __init__(self, size):
-        self.integer_validator("height_and_width", size)
+        self.integer_validator("size", size)
         self.__size = size
 
     ''' defining an area function'''
