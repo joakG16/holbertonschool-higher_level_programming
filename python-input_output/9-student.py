@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 ''' Writing a class "Student" that defines a student '''
-class_to_json = __import__('8-class_to_json').class_to_json
 
 
 class Student:
@@ -13,4 +12,4 @@ class Student:
     def to_json(self):
         ''' retrieving a dictionary representation of a Student
         instance (same as 8-class_to_json.py)'''
-        return class_to_json(self)
+        return self.__dict__
