@@ -55,7 +55,7 @@ class Rectangle(Base):
         else:
             self.__height = h_value
 
-    # x
+    # x variable
     @property
     def x(self):
         return self.__x
@@ -69,7 +69,7 @@ class Rectangle(Base):
         else:
             self.__x = x_value
 
-    # y
+    # y variable
     @property
     def y(self):
         return self.__y
