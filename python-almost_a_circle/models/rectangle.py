@@ -22,11 +22,11 @@ class Rectangle(Base):
         is trying to assign to a variable. So after, in your class
         you can “trust” these attributes.
         '''
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-    
+        self.width = width  # callling instance (property) method width
+        self.height = height
+        self.x = x
+        self.y = y
+
     # width
     @property
     def width(self):
@@ -35,11 +35,10 @@ class Rectangle(Base):
     @width.setter
     def width(self, w_value):
         if type(w_value) is not int:
-            raise TypeError("Width must be an integer")
-        if w_value < 1:
-            raise ValueError("Width must be > 0")
-        else:
-            self.__width = w_value
+            raise TypeError("width must be an integer")
+        if w_value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = w_value
 
     # height
     @property
@@ -49,11 +48,10 @@ class Rectangle(Base):
     @height.setter
     def height(self, h_value):
         if type(h_value) is not int:
-            raise TypeError("Height must be an integer")
-        if h_value < 1:
-            raise ValueError("Height must be > 0")
-        else:
-            self.__height = h_value
+            raise TypeError("height must be an integer")
+        if h_value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = h_value
 
     # x variable
     @property
@@ -64,10 +62,9 @@ class Rectangle(Base):
     def x(self, x_value):
         if type(x_value) is not int:
             raise TypeError("x must be an integer")
-        if x_value < 1:
+        if x_value < 0:
             raise ValueError("x must be >= 0")
-        else:
-            self.__x = x_value
+        self.__x = x_value
 
     # y variable
     @property
@@ -78,6 +75,6 @@ class Rectangle(Base):
     def y(self, y_value):
         if type(y_value) is not int:
             raise TypeError("y must be an integer")
-        if y_value < 1:
+        if y_value < 0:
             raise ValueError("y must be >= 0")
         self.__y = y_value
