@@ -2,6 +2,7 @@
 ''' This module contains a user-defined class named "Base".
 This class will be the “base” of all other classes in this project. '''
 
+
 class Base:
     ''' private class attribute '''
     __nb_objects = 0
@@ -12,4 +13,3 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
