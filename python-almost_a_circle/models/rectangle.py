@@ -92,7 +92,7 @@ class Rectangle(Base):
         for row in range(self.height):
             print(" " * self.x, end="")
             print("#" * self.width)
-    
+
     def update(self, *args):
         ''' This method that assigns an argument to each attribute
         This type of argument is called a “no-keyword argument”.
