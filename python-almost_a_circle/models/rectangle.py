@@ -111,6 +111,9 @@ class Rectangle(Base):
                     self.y = args[arg_num]
         else:
             for key, value in kwargs.items():
+                ''' The items() method returns a view object. The view object
+                contains the key-value pairs of the dictionary,
+                as tuples in a list.'''
                 if key == 'id':
                     self.id = value
                 elif key == 'width':
