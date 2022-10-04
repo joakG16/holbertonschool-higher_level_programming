@@ -81,11 +81,15 @@ class Rectangle(Base):
 
     def area(self):
         ''' public instance method that calculates the area of the rectangle
-    instantiated
-    '''
+    instantiated '''
         return self.height * self.width
 
     def display(self):
         ''' prints in stdout the Rectangle instance with the character # '''
         for row in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        ''' human-readable string representation for the object or instance '''
+        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - \
+{self.width}/{self.height}'  # f-strings format
