@@ -92,6 +92,22 @@ class Rectangle(Base):
         for row in range(self.height):
             print(" " * self.x, end="")
             print("#" * self.width)
+    
+    def update(self, *args):
+        ''' This method that assigns an argument to each attribute
+        This type of argument is called a “no-keyword argument”.
+        The order in which the arguments are passed is important '''
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[i]
+            elif i == 1:
+                self.width = args[i]
+            elif i == 2:
+                self.height = args[i]
+            elif i == 3:
+                self.x = args[i]
+            elif i == 4:
+                self.y = args[i]
 
     def __str__(self):
         ''' human-readable string representation for the object or instance '''
