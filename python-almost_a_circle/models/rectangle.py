@@ -86,7 +86,11 @@ class Rectangle(Base):
 
     def display(self):
         ''' prints in stdout the Rectangle instance with the character # '''
+        ''' from task 7, it handles x and y variables'''
+        for lines in range(self.y):
+            print("")
         for row in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
