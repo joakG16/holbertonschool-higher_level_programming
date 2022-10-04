@@ -97,17 +97,17 @@ class Rectangle(Base):
         ''' This method that assigns an argument to each attribute
         This type of argument is called a “no-keyword argument”.
         The order in which the arguments are passed is important '''
-        for i in range(len(args)):
-            if i == 0:
-                self.id = args[i]
-            elif i == 1:
-                self.width = args[i]
-            elif i == 2:
-                self.height = args[i]
-            elif i == 3:
-                self.x = args[i]
-            elif i == 4:
-                self.y = args[i]
+        for arg_num in range(len(args)):
+            if arg_num == 0:
+                self.id = args[arg_num]
+            elif arg_num == 1:
+                self.width = args[arg_num]
+            elif arg_num == 2:
+                self.height = args[arg_num]
+            elif arg_num == 3:
+                self.x = args[arg_num]
+            elif arg_num == 4:
+                self.y = args[arg_num]
 
     def __str__(self):
         ''' human-readable string representation for the object or instance '''
