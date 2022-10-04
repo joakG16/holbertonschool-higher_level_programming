@@ -88,4 +88,4 @@ class Rectangle(Base):
     def display(self):
         ''' prints in stdout the Rectangle instance with the character # '''
         for row in range(self.height):
-            print("#" * self.width, end="")
+            print("#" * self.width)
