@@ -129,3 +129,9 @@ class Rectangle(Base):
         ''' human-readable string representation for the object or instance '''
         return f'[Rectangle] ({self.id}) {self.x}/{self.y} - \
 {self.width}/{self.height}'  # f-strings format
+
+    def to_dictionary(self):
+        ''' this public method returns returns the dictionary
+        representation of a Rectangle '''
+        return {'x': self.x, 'y': self.y
+                , 'id': self.id, 'height': self.height, 'width': self.width}
