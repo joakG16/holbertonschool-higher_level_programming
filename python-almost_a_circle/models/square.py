@@ -17,3 +17,14 @@ class Square(Rectangle):
     def __str__(self):
         ''' string rep. of a square '''
         return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
+
+    @property
+    def size(self):
+        ''' getter using property method from superclass '''
+        return self.width
+
+    @size.setter
+    def size(self, size_value):
+        ''' getter using setter property methods from superclass '''
+        self.width = size_value
+        self.height = size_value
