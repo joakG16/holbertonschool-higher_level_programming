@@ -28,3 +28,33 @@ class Square(Rectangle):
         ''' getter using setter property methods from superclass '''
         self.width = size_value
         self.height = size_value
+        
+    def update(self, *args, **kwargs):
+        ''' This method assigns an argument to each specified in
+        order to update the instance's attribute.
+        This type of argument is called a “no-keyword argument”.
+        The order in which the arguments are passed is important '''
+        if args and len(args) != 0:
+            for arg_num in range(len(args)):
+                if arg_num == 0:
+                    self.id = args[arg_num]
+                elif arg_num == 1:
+                    self.size = args[arg_num]
+                elif arg_num == 2:
+                    self.x = args[arg_num]
+                elif arg_num == 3:
+                    self.y = args[arg_num]
+        else:
+            for key, value in kwargs.items():
+                ''' The items() method returns a view object. The view object
+                contains the key-value pairs of the dictionary,
+                as tuples in a list.'''
+                if key == 'id':
+                    self.id = value
+                elif key == 'size':
+                    self.width = value
+                    self.height = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
