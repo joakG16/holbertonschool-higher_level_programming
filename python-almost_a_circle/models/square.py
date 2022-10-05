@@ -28,7 +28,7 @@ class Square(Rectangle):
         ''' getter using setter property methods from superclass '''
         self.width = size_value
         self.height = size_value
-        
+
     def update(self, *args, **kwargs):
         ''' This method assigns an argument to each specified in
         order to update the instance's attribute.
