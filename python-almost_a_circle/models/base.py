@@ -2,7 +2,6 @@
 ''' This module contains a user-defined class named "Base".
 This class will be the “base” of all other classes in this project. '''
 
-
 import json
 
 
@@ -26,3 +25,18 @@ class Base:
             ''' json.dumps() function convert the raw data into JSON
     format but stores it as a string '''
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file
+
+        Args:
+            list_objs (list): list of instances that inherits from Base
+            (can be rectangle, square)
+        """
+        with open(cls.__name__ + ".json", mode="w", encoding="utf-8") as file:
+            if list_objs is None:
+                file.write(cls.to_json_string(None))
+            else:
+                obj_dicts = [obje.to_dictionary() for obje in list_objs]
+                file.write(cls.to_json_string(obj_dicts))
