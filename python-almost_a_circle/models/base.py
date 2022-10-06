@@ -2,6 +2,7 @@
 ''' This module contains a user-defined class named "Base".
 This class will be the “base” of all other classes in this project. '''
 
+from os import path
 import json
 
 
@@ -65,3 +66,25 @@ class Base:
         # That's why the page says "**dictionary must be used as
         # **kwargs of the method update".
         return dum_ins
+
+    @classmethod
+    def load_from_file(cls):
+        ''' class method that creates instances from parsed list of JSON
+        format strings, located in a file .json, which strings contain 
+        the attributes to create them '''
+        if cls.__name__ == "Rectangle":
+            file_path = cls.__name__ + '.json'
+            if path.exists(file_path):  # If file not exist, return empty list
+                with open(file_path, mode='r', encoding='utf-8') as file:
+                    data = cls.from_json_string(file.read())
+                    return [cls.create(**dict) for dict in data]
+            else:
+                return []
+        elif cls.__name__ == "Square":
+            file_path = cls.__name__ + '.json'
+            if path.exists(file_path):
+                with open(file_path, mode='r', encoding='utf-8') as file:
+                    data = cls.from_json_string(file.read())
+                    return [cls.create(**dict) for dict in data]
+            else:
+                return []
