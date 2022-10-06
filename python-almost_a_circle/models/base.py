@@ -51,3 +51,17 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        ''' class method that returns an instance with all values set '''
+        if cls.__name__ == "Rectangle":
+            dum_ins = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dum_ins = cls(1)
+        dum_ins.update(**dictionary)  # either expanded to func(key=value) or
+        #                   func(key1=value1, key2=value2)
+        #                   this is called dictionary unpacking.
+        # That's why the page says "**dictionary must be used as
+        # **kwargs of the method update".
+        return dum_ins
