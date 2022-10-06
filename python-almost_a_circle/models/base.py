@@ -42,3 +42,12 @@ class Base:
                 method, and then writing to the file the JSON str. rep. ''' 
                 obj_dicts = [obje.to_dictionary() for obje in list_objs]
                 file.write(cls.to_json_string(obj_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        ''' static method that returns the list of the JSON
+        string representation named "json_string"'''
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
