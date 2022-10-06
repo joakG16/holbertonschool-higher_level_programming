@@ -70,7 +70,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         ''' class method that creates instances from parsed list of JSON
-        format strings, located in a file .json, which strings contain 
+        format strings, located in a file .json, which strings contain
         the attributes to create them '''
         if cls.__name__ == "Rectangle":
             file_path = cls.__name__ + '.json'
