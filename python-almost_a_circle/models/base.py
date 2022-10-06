@@ -39,7 +39,7 @@ class Base:
                 file.write(cls.to_json_string(None))
             else:
                 ''' making a list of the object's dictionaries, using its
-                method, and then writing to the file the JSON str. rep. ''' 
+                method, and then writing to the file the JSON str. rep. '''
                 obj_dicts = [obje.to_dictionary() for obje in list_objs]
                 file.write(cls.to_json_string(obj_dicts))
 
