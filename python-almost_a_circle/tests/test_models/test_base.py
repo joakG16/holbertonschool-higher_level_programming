@@ -4,12 +4,13 @@
 import unittest
 from models.base import Base
 
+
 class TestClass(unittest.TestCase):
     """Base class tests"""
     def test_validate(self):
         """ validate the id number, without args """
         A1 = Base()
-        self.assertEqual(A1.id, 1) 
+        self.assertEqual(A1.id, 1)
 
     def test_validate1(self):
         """ validate the id number, with args """
@@ -41,7 +42,7 @@ class TestClass(unittest.TestCase):
 
     def test_validate6(self):
         ''' should return a JSON string '''
-        G1 = Base.to_json_string([ { 'id': 12 }])
+        G1 = Base.to_json_string([{'id': 12}])
         self.assertEqual(G1, '[{"id": 12}]')
 
     def test_validate7(self):
@@ -58,6 +59,7 @@ class TestClass(unittest.TestCase):
         ''' should return a list '''
         J1 = Base.from_json_string('[{ "id": 89 }]')
         self.assertEqual(J1, [{'id': 89}])
+
 
 if __name__ == "__main__":
     unittest.main()
