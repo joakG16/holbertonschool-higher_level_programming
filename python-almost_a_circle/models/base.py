@@ -76,8 +76,8 @@ class Base:
             file_path = cls.__name__ + '.json'
             if path.exists(file_path):  # If file not exist, return empty list
                 with open(file_path, mode='r', encoding='utf-8') as file:
-                    data = cls.from_json_string(file.read())
-                    return [cls.create(**dict) for dict in data]
+                    data = cls.from_json_string(file.read())  # returns list
+                    return [cls.create(**dict) for dict in data]  # use each
             else:
                 return []
         elif cls.__name__ == "Square":
