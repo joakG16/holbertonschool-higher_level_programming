@@ -18,8 +18,12 @@ if __name__ == '__main__':
          (SELECT states.id FROM states WHERE states.name = %s)\
             ORDER BY cities.id ASC;")
     cursor.execute(query_and_subqu, (sys.argv[4], ))
-    query_rows = cursor.fetchall()
-    for row in query_rows:
-        print(row, end=", ")
+    query_rows_tuple = cursor.fetchall()  # fetchall() returns a tuple, 
+    cities = [tup_elem[0] for tup_elem in query_rows_tuple]  # l. comprehension
+    for city in cities:
+        if city == cities[-1]:  # last element in list with newline
+            print(city)
+        else:
+            print(city, end=", ")
     cursor.close()
     conn.close()
