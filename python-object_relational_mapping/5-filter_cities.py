@@ -17,7 +17,7 @@ if __name__ == '__main__':
     query_and_subqu = ("SELECT cities.name FROM cities WHERE cities.state_id =\
          (SELECT states.id FROM states WHERE states.name = %s)\
             ORDER BY cities.id ASC;")
-    cursor.execute(query_and_subqu, sys.argv[4])
+    cursor.execute(query_and_subqu, (sys.argv[4], ))
     query_rows = cursor.fetchall()
     for row in query_rows:
         print(row)
