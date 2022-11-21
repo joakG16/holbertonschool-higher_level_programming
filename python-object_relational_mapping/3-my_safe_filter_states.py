@@ -17,7 +17,7 @@ if __name__ == '__main__':
                            passwd=sys.argv[2], db=sys.argv[3])
     cursor = conn.cursor()
     query_txt = "SELECT * FROM states WHERE name LIKE BINARY\
-    '%s' ORDER BY id ASC;"  # parametized query
+    %s ORDER BY id ASC;"  # parametized query
     cursor.execute(query_txt, (sys.argv[4], ))  # the input in the tuple
     # will supply the previous query in a safe way, being automatically quoted
     # staying as a string and preventing therefore to be malicious user input
