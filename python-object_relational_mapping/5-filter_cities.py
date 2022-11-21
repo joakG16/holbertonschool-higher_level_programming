@@ -20,6 +20,6 @@ if __name__ == '__main__':
     cursor.execute(query_and_subqu, (sys.argv[4], ))
     query_rows = cursor.fetchall()
     for row in query_rows:
-        print(row)
+        print(row, end=", ")
     cursor.close()
     conn.close()
