@@ -20,10 +20,13 @@ if __name__ == '__main__':
     cursor.execute(query_and_subqu, (sys.argv[4], ))
     query_rows_tuple = cursor.fetchall()  # fetchall() returns a tuple, 
     cities = [tup_elem[0] for tup_elem in query_rows_tuple]  # l. comprehension
-    for city in cities:
-        if city == cities[-1]:  # last element in list with newline
-            print(city)
-        else:
-            print(city, end=", ")
+    if cities:
+        for city in cities:
+            if city == cities[-1]:  # last element in list with newline
+                print(city)
+            else:
+                print(city, end=", ")
+    else:
+        print()
     cursor.close()
     conn.close()
