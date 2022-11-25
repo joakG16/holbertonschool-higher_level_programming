@@ -12,8 +12,8 @@ if __name__ == "__main__":  # only execute when called "directly"
     import sys
 
     user = sys.argv[1]  # mysql username
-    passwrd = sys.argv[2]  # mysql password 
-    db = sys.argv[3] # database name
+    passwrd = sys.argv[2]  # mysql password
+    db = sys.argv[3]  # database name
 
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(user, passwrd, db),
