@@ -13,7 +13,8 @@ Base = declarative_base()
 
 
 class State(Base):
-    """ This class represents a state table in the database """
+    """ This class represents the state table in the database
+    server-side """
     __tablename__ = "states"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
