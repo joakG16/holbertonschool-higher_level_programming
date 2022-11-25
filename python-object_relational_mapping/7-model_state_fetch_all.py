@@ -17,8 +17,9 @@ if __name__ == "__main__":  # only execute when called "directly"
 
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(user, passwrd, db),
-        pool_pre_ping=True)
+        pool_pre_ping=True)  # creating conection to database (hbtn_0e_6_usa)
     session = Session(engine)
     for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
     session.close()
+    #  state is the model mapped to the state table in the database
