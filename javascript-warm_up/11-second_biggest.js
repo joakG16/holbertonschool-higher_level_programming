@@ -1,12 +1,10 @@
-#!/usr/bin/node
+#!/usr/local/bin/node
 
-function secondBiggest (list) {
-  if (list.length < 2) {
+function secondBiggest (array) {
+  if (array.length < 2) {
     return 0;
   }
-  list.sort(function (a, b) {
-    return a - b;
-  });
-  return list[list.length - 2];
+  const sortedArr = array.sort(); // in ascending order
+  return sortedArr[array.length - 2];
 }
-console.log(secondBiggest(process.argv.slice(2)));
+console.log(secondBiggest(process.argv.slice(2))); // skip first two arguments
