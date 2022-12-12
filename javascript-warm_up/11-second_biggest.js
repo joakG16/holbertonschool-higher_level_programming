@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 function secondBiggest (array) {
   if (array.length < 2) {
@@ -11,7 +11,6 @@ function secondBiggest (array) {
   const sortedArr = parsedArr.sort(function (a, b) {
     return a - b;
   }); // in ascending order
-  console.log(sortedArr);
   return sortedArr[array.length - 2];
 }
 console.log(secondBiggest(process.argv.slice(2))); // skip first two arguments
