@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 function secondBiggest (array) {
   if (array.length < 2) {
