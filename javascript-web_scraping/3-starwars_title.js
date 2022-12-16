@@ -1,13 +1,14 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 const request = require('request');
 
 const filmID = process.argv[2];
 
-request(`https://swapi-api.hbtn.io/api/films/${filmID}`, (err, res) => {
+request(`https://swapi-api.hbtn.io/api/films/${filmID}`, (err, res, body) => {
   if (err) {
     console.error(err);
   } else {
-    console.log('code: ' + res.title);
+    const parseddata = JSON.parse(body);
+    console.log(parseddata.title);
   }
 });
