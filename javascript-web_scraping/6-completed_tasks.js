@@ -12,9 +12,9 @@ request(todoAPIurl, (err, res) => {
     const userAndTask = {};
 
     for (const obj in parsedTasks) {
-      if (parsedTasks[obj].completed === true) {
+      if (parsedTasks[obj].completed === true) { // entering 'completed' key in current task object
         if (!userAndTask[parsedTasks[obj].userId]) {
-          userAndTask[parsedTasks[obj].userId] = 1; // assign value 1 if key does not yet exist in the object
+          userAndTask[parsedTasks[obj].userId] = 1; // assign value 1 if key does not yet exist in the object (using the current userId number as key number)
         } else {
           userAndTask[parsedTasks[obj].userId] += 1; // increment the value by 1 if it exists
         }
