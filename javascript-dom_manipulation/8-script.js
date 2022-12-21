@@ -1,12 +1,9 @@
-const helloIdElem = document.querySelector('#hello');
+const helloIdElem = document.getElementById('hello');
 
-const options = {
-  mode: 'no-cors'
-};
-
-fetch('https://fourtonfish.com/hellosalut/?lang=fr', options)
+fetch('https://stefanbohacek.com/hellosalut/?lang=fr')
   .then(resp => resp.json())
   .then(data => {
-    helloIdElem.innerHTML = data.hello;
+    console.log(data);
+    helloIdElem.innerText = data.hello;
   })
   .catch(err => console.log(err));
